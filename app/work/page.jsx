@@ -15,75 +15,45 @@ import "swiper/css";
 const projects = [
   {
     num: "01",
-    category:"frontend",
-    title:"EcoSheri",
-    description:"EcoSheri is an eco-friendly web project with smooth animations using Shery.js, Locomotive Scroll, and GSAP for seamless interactivity and transitions.",
+    category:"fullstack",
+    title:"UNIBee",
+    description:"Smart URL shortener with analytics.",
     stack:[{name:"Html 5"}, {name:"Css"},{name:"Javascripts"}],
     image:"/s1.png",
-    repo:"https://github.com/suryadwd/EcoSheri",
-    github:"https://eco-sheri.vercel.app"
+    repo:"https://github.com/sunnykumar37/UNIbee-URLSHORTNER",
+    github:"https://UNIBee.vercel.app"
   },
   {
     num: "02",
-    category:"frontend",
-    title:"Review ",
-    description:"A React project combining GSAP animations and Canvas tools to create dynamic, visually engaging web experiences.",
+    category:"fullstack",
+    title:"Local-Attraction-Recommender ",
+    description:"An intelligent web app that suggests nearby tourist attractions based on user interests and location preferences.",
     stack:[{name:"Html 5"}, {name:"Css"},{name:"React"},{name:"Javascripts"},{name:"GSAP"}],
     image:"/s2.png",
-    repo:"https://github.com/suryadwd/ReactGSAP-AnimationStarter",
-    github:"https://react-gsap-animation-starter.vercel.app"
+    repo:"https://github.com/sunnykumar37/Local-Attraction-Recommender",
+    github:"https://local-attraction-recommender.vercel.app"
   },
   {
     num: "03",
     category:"frontend",
-    title:"Retro-Web",
-    description:"Retro-Web is a creative website using HTML, CSS, and JavaScript with Locomotive Scroll for smooth scrolling, GSAP for animations, and custom fonts.",
+    title:"Assignment-Frontend",
+    description:"Created a frontend from figma as a assignment for the company.",
     stack:[{name:"Html 5"}, {name:"Css"},{name:"React"},{name:"Javascripts"},{name:"GSAP"}],
     image:"/s3.png",
-    repo:"https://github.com/suryadwd/Retro-web",
-    github:"https://retroweb-chi.vercel.app/"
+    repo:"https://github.com/sunnykumar37/Assignment-FrontEnd",
+    github:"https://assignment-front-end-enm9.vercel.app/Pages/ProfessionalResumeServicesLandingPage.html"
   },
   {
     num: "04",
-    category:"frontend",
-    title:"Lookups",
-    description:"A modern web project utilizing HTML, CSS, and JavaScript to create smooth scroll effects and animations. ",
-    stack:[{name:"Html 5"}, {name:"Css"},{name:"React"},{name:"Javascripts"},{name:"GSAP"}],
+    category:"fullstack",
+    title:"Air-Quality-Dashboard",
+    description:"A modern web project utilizing Streamlit, Python, and Visualizations to create smooth scroll effects and animations. ",
+    stack:[{name:"Streamlit"}, {name:"Python"},{name:"Numpy"},{name:"Matplotlib"},{name:"Pandas"}],
     image:"/s4.png",
-    repo:"https://github.com/suryadwd/Scroll-fx-Studio",
-    github:"https://scroll-fx-studio.vercel.app/"
+    repo:"https://github.com/sunnykumar37/Air-Quality-Dashboard",
+    github:"https://air-quality-dashboard.vercel.app/"
   },
-  {
-    num: "05",
-    category:"frontend",
-    title:"Showcase",
-    description:"An interactive web UI demonstrating the use of Shery.js for image effects and GSAP for smooth animations. The project features a dynamic background with image transitions",
-    stack:[{name:"Html 5"}, {name:"Css"},{name:"React"},{name:"Javascripts"},{name:"GSAP"}],
-    image:"/s5.png",
-    repo:"https://github.com/suryadwd/Shery-js",
-    github:"https://shery-js-rho.vercel.app"
-  },
-  {
-    num: "06",
-    category:"frontend",
-    title:"SheryFront",
-    description:"SheryFront is a modern web development project leveraging the powerful features of SheryJS. It focuses on delivering dynamic, interactive, and visually stunning user interfaces",
-    stack:[{name:"Html 5"}, {name:"Css"},{name:"React"},{name:"Javascripts"},{name:"GSAP"}],
-    image:"/s6.png",
-    repo:"https://github.com/suryadwd/SheryFront",
-    github:"https://shery-front.vercel.app"
-  },
-  {
-    num: "07",
-    category:"frontend",
-    title:"Landing-Onn",
-    description:"SheryFront is a modern web development project leveraging the powerful features of SheryJS. It focuses on delivering dynamic, interactive, and visually stunning user interfaces",
-    stack:[{name:"Html 5"}, {name:"Css"},{name:"React"},{name:"Javascripts"},{name:"GSAP"}],
-    image:"/s7.png",
-    repo:"https://github.com/suryadwd/Shery-UI",
-    github:"https://shery-ui.vercel.app"
-  },
-
+  
 ]
 
 

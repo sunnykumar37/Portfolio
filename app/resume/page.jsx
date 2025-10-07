@@ -19,11 +19,11 @@ const data = {
   info:[
     {
       fieldName:"Name",
-      fieldValue:"Surya Dwivedi"
+      fieldValue:"Sunny Kumar"
     },
     {
       fieldName:"Phone",
-      fieldValue:"+91 6307919337"
+      fieldValue:"+91 9138136866"
     },
     {
       fieldName:"Experiance",
@@ -35,11 +35,11 @@ const data = {
     },
     {
       fieldName:"Email",
-      fieldValue:"surajdwivedi644@gmail.com"
+      fieldValue:"sunnyk28912@gmail.com"
     },
     {
       fieldName:"Languages",
-      fieldValue:"English, Hindi, Bhojpuri"
+      fieldValue:"English, Hindi"
     },
    
   ]
@@ -56,15 +56,12 @@ const education = {
       degree:"Front-end devloper bootcamp",
       duration:"2023"
     },
+    
+    
     {
-      institution:"Physics Wallah",
-      degree:"Java-Dsa bootcamp",
-      duration:"2024"
-    },
-    {
-      institution:"Sheriyansh Coding School",
-      degree:"Gen-Ai and web-dev",
-      duration:"2024"
+      institution:"Freecode camp",
+      degree:"Data Analyst bootcamp",
+      duration:"2025"
     },
     {
       institution:"Lovely Professional University",
@@ -141,26 +138,7 @@ const experiance = {
         "Ensured optimal UI/UX design with Tailwind CSS and Figma."
       ]
     },
-    {
-      company: "Physics Wallah",
-      role: "Java DSA Intern",
-      duration: "2024",
-      responsibilities: [
-        "Implemented DSA concepts in Java and optimized algorithms for efficiency.",
-        "Solved real-world problems and participated in coding challenges.",
-        "Gained experience in system design and problem-solving strategies."
-      ]
-    },
-    {
-      company: "Sheriyans Coding School",
-      role: "Gen-AI and Web Dev Trainee",
-      duration: "2024",
-      responsibilities: [
-        "Explored Generative AI technologies and their applications.",
-        "Worked on AI-powered web development projects.",
-        "Enhanced full-stack skills with modern frameworks."
-      ]
-    }
+   
   ]
 };
 

@@ -15,17 +15,17 @@ const info = [
   {
     icon: <FaPhoneAlt/>,
     title:"Phone",
-    description: "+91 6307919337"
+    description: "+91 9138136866"
   },
   {
     icon: <FaEnvelope/>,
     title:"Email",
-    description: "surajdwivedi644@gmail.com"
+    description: "sunnyk28912@gmail.com@gmail.com"
   },
   {
     icon: <FaMapMarkerAlt/>,
     title:"Address",
-    description: "Lucknow, Uttar-Pradesh, 212655"
+    description: "Gohana, Haryana, 131304"
   },
 ]
 

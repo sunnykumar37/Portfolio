@@ -25,7 +25,7 @@ const MobNav = () => {
       <SheetContent className="flex flex-col items-center ">
          <div className="mt-20 mb-40 text-center text-2xl">
           <Link href="/">
-          <h1 className="text-4xl font-semibold">Surya<span className="text-accent">.</span> </h1>
+          <h1 className="text-4xl font-semibold">Sunny Kumar<span className="text-accent">.</span> </h1>
           </Link>
          </div>
          <nav className="flex flex-col gap-8 "> 
