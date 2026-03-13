@@ -15,7 +15,7 @@ import {motion} from "framer-motion"
 
 const data = {
   title:"About me",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae porro quo fugiat! Non facilis id?",
+  description: "Passionate developer focused on creating scalable web applications, exploring AI technologies, and building impactful digital solutions.",
   info:[
     {
       fieldName:"Name",
@@ -49,7 +49,7 @@ const education = {
 
   icons:<PiStudentDuotone />,
   title:"My education",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae porro quo fugiat! Non facilis id?",
+  description: "Currently pursuing a Bachelor's degree in Computer Science with a focus on software development, cloud computing, and AI-based systems.",
   items:[
     {
       institution:"Freecode camp",
@@ -67,6 +67,11 @@ const education = {
       institution:"Lovely Professional University",
       degree:"Btech CSE",
       duration:"2023 - 2027"
+    },
+    {
+      institution:"Cipher Schools",
+      degree:"CPP with OOPs Programming Language",
+      duration:"2025"
     },
    
   ]
@@ -153,7 +158,7 @@ const Resume = () => {
     >
      <div className="container  mx-auto">
 
-<Tabs defaultValue="data" className="flex mt-20 flex-col xl:flex-row gap-[60px]   text-black rounded-xl">
+<Tabs defaultValue="data" className="flex mt-20 flex-col xl:flex-row gap-[60px]   text-white rounded-xl">
 
   <TabsList  className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
     <TabsTrigger value="education" className="border rounded-xl w-full py-3 transition-all duration-300 data-[state=active]:bg-accent">Education</TabsTrigger>

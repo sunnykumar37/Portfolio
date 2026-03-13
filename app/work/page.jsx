@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 
 import React, {useState} from "react"
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs"
+import { BsArrowUpRight, BsArrowLeft, BsArrowRight, BsGithub } from "react-icons/bs"
 
 import Link from "next/link"
 import Image from "next/image"
@@ -16,22 +16,22 @@ const projects = [
   {
     num: "01",
     category:"fullstack",
-    title:"UNIBee",
-    description:"Smart URL shortener with analytics.",
-    stack:[{name:"Html 5"}, {name:"Css"},{name:"Javascripts"}],
+    title:"Talksy",
+    description:"Real-time chat platform with secure authentication.",
+    stack:[{name:"Next.js"}, {name:"Clerk"},{name:"Convex"}, {name:"Tailwind CSS"}],
     image:"/s1.png",
-    repo:"https://github.com/sunnykumar37/UNIbee-URLSHORTNER",
-    github:"https://UNIBee.vercel.app"
+    repo:"https://github.com/sunnykumar37/Talksy",
+    github:"https://talksy-frontend-xi.vercel.app/"
   },
   {
     num: "02",
     category:"fullstack",
-    title:"Local-Attraction-Recommender ",
-    description:"An intelligent web app that suggests nearby tourist attractions based on user interests and location preferences.",
-    stack:[{name:"Html 5"}, {name:"Css"},{name:"React"},{name:"Javascripts"},{name:"GSAP"}],
+    title:"TaskMaster",
+    description:"Simple task manager for creating and tracking tasks.",
+    stack:[{name:"React.js"}, {name:"Node.js"},{name:"MongoDB"},{name:"Express.js"},{name:"Tailwind CSS"}],
     image:"/s2.png",
-    repo:"https://github.com/sunnykumar37/Local-Attraction-Recommender",
-    github:"https://local-attraction-recommender.vercel.app"
+    repo:"https://github.com/sunnykumar37/TaskMaster",
+    github:"https://task-master-seven-ruby.vercel.app/"
   },
   {
     num: "03",
@@ -60,10 +60,25 @@ const projects = [
 const Works = () => {
 
   const [project, setProject] = useState(projects[0])
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [swiperRef, setSwiperRef] = useState(null)
 
   const handelSlideChange = (swiper) => {
     const currIndex = swiper.activeIndex
     setProject(projects[currIndex])
+    setActiveIndex(currIndex)
+  }
+
+  const handleNextProject = () => {
+    if (swiperRef) {
+      swiperRef.slideNext()
+    }
+  }
+
+  const handlePrevProject = () => {
+    if (swiperRef) {
+      swiperRef.slidePrev()
+    }
   }
 
   return (
@@ -116,30 +131,48 @@ const Works = () => {
       </div>
 
       <div className="w-full xl:w-[50%]">
-        
-        <Swiper 
-        spaceBetween={30}
-        slidesPerView={1}
-        className="xl:h-[520px] mb-12"
-        onSlideChange = {handelSlideChange}
-        >
-          {projects.map((item, index) =>{
-            return (<SwiperSlide key={index} className="w-full">
-              <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-              <div></div>
-                <div className=" relativew-full h-full">
+        <div className="relative">
+          <Swiper 
+          spaceBetween={30}
+          slidesPerView={1}
+          className="xl:h-[520px]"
+          onSlideChange = {handelSlideChange}
+          onSwiper={setSwiperRef}
+          >
+            {projects.map((item, index) =>{
+              return (<SwiperSlide key={index} className="w-full">
+                <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                <div></div>
+                  <div className="relative w-full h-full">
 
-                  <Image src={item.image} fill  alt="img" className="object-contain"/>
+                    <Image src={item.image} fill  alt="img" className="object-contain"/>
 
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>)
-          })}
-        
-      
-          
-        </Swiper>
+              </SwiperSlide>)
+            })}
+          </Swiper>
 
+          <button
+            type="button"
+            onClick={handlePrevProject}
+            disabled={activeIndex === 0}
+            aria-label="Previous project"
+            className="group absolute left-3 top-1/2 z-20 -translate-y-1/2 h-11 w-11 rounded-full border border-white/30 bg-primary/70 text-white backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:bg-accent hover:border-accent hover:text-primary hover:scale-105 disabled:opacity-35 disabled:cursor-not-allowed disabled:hover:scale-100"
+          >
+            <BsArrowLeft className="text-xl transition-transform duration-300 group-hover:-translate-x-0.5" />
+          </button>
+
+          <button
+            type="button"
+            onClick={handleNextProject}
+            disabled={activeIndex === projects.length - 1}
+            aria-label="Next project"
+            className="group absolute right-3 top-1/2 z-20 -translate-y-1/2 h-11 w-11 rounded-full border border-white/30 bg-primary/70 text-white backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:bg-accent hover:border-accent hover:text-primary hover:scale-105 disabled:opacity-35 disabled:cursor-not-allowed disabled:hover:scale-100"
+          >
+            <BsArrowRight className="text-xl transition-transform duration-300 group-hover:translate-x-0.5" />
+          </button>
+        </div>
       </div>
     </div>
 

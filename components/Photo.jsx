@@ -19,13 +19,13 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" }
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute">
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute rounded-full overflow-hidden">
           <Image src="/Mynewpic.png"
             priority
             quality={100}
             fill
             alt=""
-            className="object-contain"
+            className="object-cover object-top"
           />
         </motion.div>
 
