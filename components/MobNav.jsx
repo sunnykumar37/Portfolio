@@ -28,13 +28,19 @@ const MobNav = () => {
           <h1 className="text-4xl font-semibold">Sunny Kumar<span className="text-accent">.</span> </h1>
           </Link>
          </div>
-         <nav className="flex flex-col gap-8 "> 
+        <nav className="flex flex-col items-center gap-6"> 
           {links.map((item, index) =>{
+         const isActive = item.path === path
+         const isContactLink = item.path === "/contact"
+
           return(
             <Link 
             href={item.path}
              key={index}
-             className={`${item.path === path && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all ease-in-out`}>{item.name}</Link>
+           className={isContactLink
+            ? `${isActive ? "bg-accent text-primary" : "border-accent text-accent"} capitalize font-medium rounded-xl border px-5 py-2 transition-all duration-300 hover:bg-accent hover:text-primary`
+            : `${isActive ? "text-accent border-accent" : "text-white border-transparent"} capitalize font-medium border-b-2 pb-1 hover:text-accent transition-all duration-300`
+           }>{item.name}</Link>
           )
          } )} </nav>
       </SheetContent>

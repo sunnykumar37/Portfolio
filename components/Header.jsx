@@ -14,11 +14,8 @@ const header = () => {
             </Link>
 
             {/* only for desktop  */}
-            <div className="hidden xl:flex items-center gap-8">
+            <div className="hidden xl:flex items-center">
             <Nav />
-            <Link href="/contact">
-            <button className="bg-accent border  px-3 py-[0.5] text-black rounded-xl">Hire me</button>
-            </Link>
             </div>
 
             <div className="xl:hidden"> 

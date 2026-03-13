@@ -2,11 +2,12 @@
 
 import {motion} from "framer-motion"
 
-import React, {useState} from "react"
+import React, {useEffect, useMemo, useState} from "react"
 
 import { BsArrowUpRight, BsArrowLeft, BsArrowRight, BsGithub } from "react-icons/bs"
 
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -62,6 +63,35 @@ const Works = () => {
   const [project, setProject] = useState(projects[0])
   const [activeIndex, setActiveIndex] = useState(0)
   const [swiperRef, setSwiperRef] = useState(null)
+  const searchParams = useSearchParams()
+
+  const projectIndexBySlug = useMemo(() => {
+    return projects.reduce((indexMap, item, index) => {
+      indexMap[item.title.toLowerCase()] = index
+      return indexMap
+    }, {})
+  }, [])
+
+  useEffect(() => {
+    const requestedProject = searchParams.get("project")
+
+    if (!requestedProject) {
+      return
+    }
+
+    const targetIndex = projectIndexBySlug[requestedProject.toLowerCase()]
+
+    if (!Number.isInteger(targetIndex)) {
+      return
+    }
+
+    setProject(projects[targetIndex])
+    setActiveIndex(targetIndex)
+
+    if (swiperRef) {
+      swiperRef.slideTo(targetIndex)
+    }
+  }, [searchParams, projectIndexBySlug, swiperRef])
 
   const handelSlideChange = (swiper) => {
     const currIndex = swiper.activeIndex
