@@ -2,7 +2,7 @@
 
 import {motion} from "framer-motion"
 
-import React, {useEffect, useMemo, useState} from "react"
+import React, {Suspense, useEffect, useMemo, useState} from "react"
 
 import { BsArrowUpRight, BsArrowLeft, BsArrowRight, BsGithub } from "react-icons/bs"
 
@@ -58,7 +58,7 @@ const projects = [
 ]
 
 
-const Works = () => {
+const WorksContent = () => {
 
   const [project, setProject] = useState(projects[0])
   const [activeIndex, setActiveIndex] = useState(0)
@@ -209,6 +209,22 @@ const Works = () => {
      </div>
 
     </motion.section>
+  )
+}
+
+const Works = () => {
+  return (
+    <Suspense
+      fallback={
+        <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
+          <div className="container mx-auto">
+            <div className="h-[460px] flex items-center justify-center text-white/60">Loading projects...</div>
+          </div>
+        </section>
+      }
+    >
+      <WorksContent />
+    </Suspense>
   )
 }
 
