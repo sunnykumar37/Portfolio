@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -35,10 +35,23 @@ const Contact = () => {
   const [status, setStatus] = useState({ type: "", message: "" })
   const [isSending, setIsSending] = useState(false)
 
+  useEffect(() => {
+    if (!status.message) {
+      return
+    }
+
+    const timeoutId = setTimeout(() => {
+      setStatus({ type: "", message: "" })
+    }, 4000)
+
+    return () => clearTimeout(timeoutId)
+  }, [status.message])
+
   const handleSubmit = async (event) => {
     event.preventDefault()
+    const formElement = event.currentTarget
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(formElement)
     const payload = {
       firstName: (formData.get("firstName") || "").toString().trim(),
       lastName: (formData.get("lastName") || "").toString().trim(),
@@ -74,7 +87,7 @@ const Contact = () => {
         throw new Error(responseBody?.error || "Unable to send message right now.")
       }
 
-      event.currentTarget.reset()
+      formElement.reset()
       setSelectedService("")
       setStatus({
         type: "success",
