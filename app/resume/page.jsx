@@ -154,34 +154,34 @@ const Resume = () => {
     animate={{opacity:1,
       transition:{delay:1,duration:0.4,ease:"easeIn"}
     }}
-    className="min-h-[80vh] flex items-center justify-center py-16  xl:py-0 "
+    className="min-h-[80vh] flex items-center justify-center py-10 sm:py-16 xl:py-0"
     >
      <div className="container  mx-auto">
 
-<Tabs defaultValue="data" className="flex mt-20 flex-col xl:flex-row gap-[60px]   text-white rounded-xl">
+<Tabs defaultValue="data" className="flex mt-8 sm:mt-20 flex-col xl:flex-row gap-8 xl:gap-[60px] text-white rounded-xl">
 
-  <TabsList  className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-    <TabsTrigger value="education" className="border rounded-xl w-full py-3 transition-all duration-300 data-[state=active]:bg-accent">Education</TabsTrigger>
-    <TabsTrigger value="skills" className="border rounded-xl w-full py-3 transition-all duration-300 data-[state=active]:bg-accent ">Skills</TabsTrigger>
-    <TabsTrigger value="data" className="border rounded-xl w-full py-3 transition-all duration-300 data-[state=active]:bg-accent ">About me</TabsTrigger>
-    <TabsTrigger value="experiance" className="border rounded-xl w-full py-3 transition-all duration-300 data-[state=active]:bg-accent">Experiance</TabsTrigger>
+  <TabsList  className="flex flex-col w-full max-w-full sm:max-w-[380px] mx-auto xl:mx-0 gap-4 sm:gap-6">
+    <TabsTrigger value="education" className="border rounded-xl w-full py-3 text-sm sm:text-base transition-all duration-300 data-[state=active]:bg-accent">Education</TabsTrigger>
+    <TabsTrigger value="skills" className="border rounded-xl w-full py-3 text-sm sm:text-base transition-all duration-300 data-[state=active]:bg-accent ">Skills</TabsTrigger>
+    <TabsTrigger value="data" className="border rounded-xl w-full py-3 text-sm sm:text-base transition-all duration-300 data-[state=active]:bg-accent ">About me</TabsTrigger>
+    <TabsTrigger value="experiance" className="border rounded-xl w-full py-3 text-sm sm:text-base transition-all duration-300 data-[state=active]:bg-accent">Experiance</TabsTrigger>
   </TabsList>
 
-    <div className="min-h-[70vh] xl:-mt-36 mt-20 w-full">
+    <div className="min-h-[70vh] xl:-mt-36 mt-8 sm:mt-14 w-full">
 
     <TabsContent value="education" className="text-white ">
       
     <div className="flex flex-col gap-[30px] text-center xl:text-left">
       <h1 >{education.icons}</h1>
-        <h3 className="text-4xl font-bold">{education.title}</h3>
+        <h3 className="text-3xl sm:text-4xl font-bold">{education.title}</h3>
         <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
 
-        <ScrollArea className="h-[400px]">
+        <ScrollArea className="h-[340px] sm:h-[400px]">
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
             {
               education.items.map((item, index) => {
                 return <div key={index}>
-                  <li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                  <li className="bg-[#232329] min-h-[160px] sm:h-[184px] py-5 sm:py-6 px-6 sm:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                     <span className="text-accent">{item.degree}</span>
                     <span className="text-accent">{item.duration}</span>
                     <div className="flex items-center gap-3">
@@ -203,15 +203,15 @@ const Resume = () => {
       
     <div className="flex flex-col gap-[30px] text-center xl:text-left">
       
-      <h3 className="text-4xl font-bold">{skills.title}</h3>
+      <h3 className="text-3xl sm:text-4xl font-bold">{skills.title}</h3>
       <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
 
-      <ScrollArea className="h-[400px]">
+      <ScrollArea className="h-[340px] sm:h-[400px]">
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4   gap-[30px]">
           {
             skills.list.map((item, index) => {
               return <div key={index}>
-                <li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                <li className="bg-[#232329] min-h-[150px] sm:h-[184px] py-5 sm:py-6 px-5 sm:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                 <span className="text-white">
                   {React.cloneElement(item.icon, { size: 40 })}
                 </span>
@@ -232,7 +232,7 @@ const Resume = () => {
 
     <div className="flex flex-col gap-[30px] text-center xl:text-left">
       
-        <h3 className="text-4xl font-bold">{data.title}</h3>
+        <h3 className="text-3xl sm:text-4xl font-bold">{data.title}</h3>
         <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{data.description}</p>
 
          
@@ -240,7 +240,7 @@ const Resume = () => {
             {
               data.info.map((item, index) => {
                 return <div key={index}>
-                  <li className="py-6 px-10  flex flex-col justify-center items-center lg:items-start gap-1">
+                  <li className="py-4 sm:py-6 px-4 sm:px-8 flex flex-col justify-center items-center lg:items-start gap-1">
                     <span className="text-accent">{item.fieldName}</span>
                     <span className="text-accent">{item.fieldValue}</span>
                   
@@ -256,17 +256,17 @@ const Resume = () => {
     </TabsContent>
     <TabsContent value="experiance" className="text-white">
       <div className="flex flex-col gap-[30px] text-center xl:text-left">
-        <h3 className="text-4xl font-bold">{experiance.title}</h3>
+        <h3 className="text-3xl sm:text-4xl font-bold">{experiance.title}</h3>
         <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experiance.description}</p>
 
-        <ScrollArea className="h-[400px]">
+        <ScrollArea className="h-[340px] sm:h-[400px]">
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
             {
               experiance.items.map((item, index) => {
                 return <div key={index}>
-                  <li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                  <li className="bg-[#232329] min-h-[160px] sm:h-[184px] py-5 sm:py-6 px-6 sm:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                     <span className="text-accent">{item.duration}</span>
-                    <h3 className="text-xl min-w-[260px] min-h-[60px] text-center lg:text-left">{item.role}</h3>
+                    <h3 className="text-lg sm:text-xl w-full min-h-[60px] text-center lg:text-left">{item.role}</h3>
                     <div className="flex items-center gap-3">
                       <span className="w-1 h-1 rounded-full bg-accent"></span>
                       <p className="text-white/60 ">{item.company}</p>

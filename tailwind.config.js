@@ -8,6 +8,16 @@ export default {
   ],
   theme: {
 
+		container: {
+			center: true,
+			padding: {
+				DEFAULT: "1rem",
+				sm: "1.25rem",
+				lg: "2rem",
+				xl: "2rem",
+			},
+		},
+
 		screens:{
 			sm:'640px',
 			md:'768px',

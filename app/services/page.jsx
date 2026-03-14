@@ -35,30 +35,30 @@ const data = [
 
 const Services = () => {
   return (
-    <section className="min-h[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
           <motion.div initial={{opacity:0}}
           animate={{
             opacity:1,
             transition:{delay:2.4, duration:0.4, ease:"easeInOut"}
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-[60px]"
           >
               <TooltipProvider delayDuration={120}>
               {
 
                 data.map((item, index) =>{
-                  return <div key={index} className="flex flex-1 flex-col justify-center gap-6  group">
+                  return <div key={index} className="flex flex-1 flex-col justify-center gap-4 sm:gap-6 group">
                     <div className="w-full flex justify-between items-center">
-                    <div className="text-5xl font-extrabold text-outline text-transparent  group-hover:text-outline-hover">{item.num}</div>
+                    <div className="text-4xl sm:text-5xl font-extrabold text-outline text-transparent  group-hover:text-outline-hover">{item.num}</div>
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Link
-                          className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                          className="w-[56px] h-[56px] sm:w-[70px] sm:h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                           href={item.href}
                           aria-label={`View ${item.title} case study`}
                         >
-                          <BsArrowDownRight className="text-primary text-3xl"/>
+                          <BsArrowDownRight className="text-primary text-2xl sm:text-3xl"/>
                         </Link>
                       </TooltipTrigger>
                       <TooltipContent side="top" className="bg-accent text-primary border-accent font-semibold">
@@ -66,8 +66,8 @@ const Services = () => {
                       </TooltipContent>
                     </Tooltip>
                     </div>
-                    <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{item.title}</h2>
-                    <p className="text-white/80">{item.description}</p>
+                    <h2 className="text-[32px] sm:text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{item.title}</h2>
+                    <p className="text-sm sm:text-base text-white/80">{item.description}</p>
                     <div className="border-b border-white/30 w-full"></div>
                   </div>
                 })

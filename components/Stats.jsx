@@ -74,15 +74,15 @@ const Stats = () => {
   ]
 
   return (
-    <section className="pt-16 xl:pt-8 xl:pb-0">
+    <section className="pt-10 sm:pt-12 xl:pt-8 xl:pb-0">
     
-    <div className="container mx-auto -mt-20">
-      <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
+    <div className="container mx-auto mt-2 xl:-mt-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8 max-w-[90vw] mx-auto xl:max-w-none">
         {stats.map((item) => {
           return(
-            <div key={item.id} className="flex flex-1 gap-4 items-center justify-center xl:justify-start">
+            <div key={item.id} className="flex gap-4 items-center justify-center xl:justify-start">
               <CountUp end={item.num} duration={5} delay={1} separator="," redraw className="text-4xl xl:text-6xl font-extrabold " />
-              <p className="max-w-[150px]">{item.text}</p>
+              <p className="max-w-[170px] text-sm sm:text-base">{item.text}</p>
             </div>
           )
         })}

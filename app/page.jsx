@@ -7,16 +7,16 @@ import { FiDownload } from "react-icons/fi"
 const Home = () => {
   return (
    
-    <section className="h-full">
+    <section className="h-full pb-10 xl:pb-0">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
+        <div className="flex flex-col gap-8 xl:gap-0 xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+          <div className="text-center xl:text-left order-2 xl:order-none max-w-[540px]">
+            <span className="text-base sm:text-xl">Software Developer</span>
             <h1 className="h1 mb-6">Hello I'm <br /> <span className="text-accent">Sunny Kumar</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/70">I excel in crafting elegant digital experiences and I am proficient in various programming language and technologies.</p>
+            <p className="max-w-[500px] mb-9 text-sm sm:text-base text-white/70">I excel in crafting elegant digital experiences and I am proficient in various programming language and technologies.</p>
 
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center gap-6 xl:gap-8">
               
               <a href="/CV.pdf" download="CV.pdf">
               <Button variant="outline" size="lg" className="hover:bg-accent transition-all ease-in-out duration-75 hover:text-black  rounded-xl flex items-center gap-2">
