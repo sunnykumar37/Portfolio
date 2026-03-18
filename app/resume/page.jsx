@@ -236,16 +236,14 @@ const Resume = () => {
         <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{data.description}</p>
 
          
-          <ul className="grid  lg:grid-cols-2 gap-4 sm:gap-[30px]">
+          <ul className="grid lg:grid-cols-2 gap-2 sm:gap-[30px]">
             {
               data.info.map((item, index) => {
-                return <div key={index}>
-                  <li className="py-4 sm:py-6 px-4 sm:px-8 flex flex-col justify-center items-center lg:items-start gap-1">
+                return <li key={index} className="py-2 sm:py-6 px-2 sm:px-8 flex flex-col justify-center items-center lg:items-start gap-0.5 sm:gap-1">
                     <span className="text-accent">{item.fieldName}</span>
                     <span className="text-accent break-words">{item.fieldValue}</span>
                   
                   </li>
-                </div>
               })
             }
           </ul>
