@@ -167,6 +167,11 @@ const experiance = {
         "Ensured optimal UI/UX design with Tailwind CSS and Figma."
       ]
     },
+    {
+      company: "DeepCite",
+      role: "MERN Stack Developer",
+      duration: "Jun 25 - Aug 25"
+    },
    
   ]
 };
